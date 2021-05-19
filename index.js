@@ -54,10 +54,6 @@ function sortArray(array) {
 }
 
 function writeToFile(array, path) {
-    //console.log(array)
-    // if (fs.existsSync(path)) {
-    //     fs.writeFileSync(path, JSON.stringify(array))
-    // } else {
     fs.appendFile(path, JSON.stringify(array), function (err) {
         if (err) throw err;
         console.log('Saved!');
